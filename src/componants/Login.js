@@ -44,7 +44,8 @@ const Login = () => {
       const res = await data.json();
       console.log(res);
       if (res.status == 201) {
-        alert("user login done");
+        // alert("user login done");
+        localStorage.setItem("usersdatatoken", res.result.tokens);
         setinpval({
           ...inpval,
           email: "",
